@@ -1,8 +1,4 @@
 
-
-
-
-
 <html lang="en">
 <head>
 <title>{{ title | upcase }}</title>
@@ -14,74 +10,54 @@
 }
 
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
+/* Style the side navigation */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
 }
 
-/* Create three unequal columns that floats next to each other */
-.column {
-    float: left;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+
+/* Side navigation links */
+.sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
 }
 
-/* Left and right column */
-.column.side {
-    width: 25%;
+/* Change color on hover */
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-/* Middle column */
-.column.middle {
-    width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "{{ content }}";
-    display: table;
-    clear: both;
-}
-
-/* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
-    }
+/* Style the content */
+.content {
+    margin-left: 200px;
+    padding-left: 20px;
 }
 </style>
 </head>
 <body>
 
-<h2>CSS Template using Float</h2>
-<p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect.</p>
-
-<div class="header">
-  <h2>Header</h2>
+<div class="sidenav">
+  <a href="https://antoinefama.github.io/map1">Link1</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
 </div>
 
-<div class="row">
-  <div class="column side" style="background-color:#aaa;">Column</div>
-  <div class="column middle" style="background-color:#bbb;">Column</div>
-  <div class="column side" style="background-color:#ccc;">Column</div>
-</div>
-
-<div class="footer">
-  <p>Footer</p>
+<div class="content">
+{{ content }}
 </div>
 
 </body>
