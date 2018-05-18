@@ -6,10 +6,10 @@ highlighter:      rouge # changed from `pygments` as github says so
 permalink:        pretty
 
 # Setup
-title:            'Patrick Steadman'
-tagline:          'MD-PhD student at The University of Toronto'
-description:      'A student with too many interests'
-url:              http://patricksteadman.ca
+title:            'Data Science For Business Analytics Project :'
+tagline:          'Top Manhattan Restaurant Analysis'
+description:      ''
+url:              antoinefama.github.io
 baseurl:          ''
 paginate:         5
 paginate_path:    '/blog/page:num/'
