@@ -6,7 +6,7 @@
 <div class="sidebar" id="sidebar">
   
   <div class="sidebar-logo">
-    <img src="http://www.gravatar.com/avatar/{{site.author.email_md5}}?s=120" />
+    <img src="https://thenypost.files.wordpress.com/2017/11/tax-reform-ny.jpg?quality=90&strip=all&w=1236&h=820&crop=1" />
   </div>
 
 <div id="contact-list" style="text-align:center">
@@ -63,22 +63,7 @@
     </a>
     {% endif %}
 </div>
-<div id="contact-list" style="text-align:center">
-    {% if site.author.email %}
-      <a href="mailto:{{ site.author.email }}">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square-o fa-stack-2x"></i>
-          <i class="fa fa-envelope fa-stack-1x"></i>
-        </span>
-      </a>
-    {% endif %}
-    <a href="{{ site.BASE_PATH }}/atom.xml">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square-o fa-stack-2x"></i>
-        <i class="fa fa-rss fa-stack-1x"></i>
-      </span>
-    </a>
-</div>
+
 
   <div class="sidebar-item">
     <p>{{ site.description }}</p>
@@ -86,8 +71,9 @@
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
-
-    <a class="sidebar-nav-item" href="{{ site.baseurl }}/blog">Blog</a>
+<a class="sidebar-nav-item" href="{{lol.html}}">111</a>
+<a class="sidebar-nav-item" href="{{ site.baseurl }}/blog">Blog</a>
+    
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -108,9 +94,5 @@
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
   </nav>
 
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-    </p>
-  </div>
+  
 </div>

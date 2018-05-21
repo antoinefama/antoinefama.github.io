@@ -1,0 +1,31 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge # changed from `pygments` as github says so
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            'Data Science For Business Analytics'
+tagline:          'Top Manhattan restaurant analysis'
+description:      'This website is here to illustrate our project for the course Data Science For Business Analytics'
+url:              http://patricksteadman.ca
+baseurl:          ''
+paginate:         5
+paginate_path:    '/blog/page:num/'
+
+author:
+  name: ''
+  email: ''
+  github:
+  twitter:
+  linkedin:
+  goodreads:
+  orcid: 
+  google_scholar: 
+  email_md5:
+  emailalt_md5:
+  disqus_shortname:
+  google_analytics_id: 
+  google_analytics_url: 
+  bio: 
