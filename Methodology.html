@@ -3,5 +3,37 @@ layout: page
 title: Methodology
 ---
 
+<p style="text-align:center;"><img src="{{ site.baseurl }}/png/meth.jpg" alt="analyse"></p>
 
-<p>hello world</p>
+
+<p align="justify">In our project we used quite a lot of concept/method that we didn’t know before, so it seems interesting to have a methodology section and to try to present them a bit.</p>
+
+<h2><u>Scraping</u></h2>
+
+<p align="justify"> The first thing we needed to do is scraping the data from TripAdvisor. To do so we needed to understand a little bit how html and css code worked, but thanks to our web browser and its development tools we can just highlight the object we want for instance the restaurant name and the devloper tools shows us the relevant div(a section in the html code). Then we needed R to get the information we wanted on the pages we wanted. To do that we used the package RSelenium and the software Docker; what it does is emulating a web browser from the terminal and than R can access it with selenium commands and thus get the html and the information we wanted on the desired page. Note that each time we scrape we needed to run Docker server from the terminal, we get to the problem and technical details later. We did use this process because TripAdvisor API did not allowed us to register since we are not a business.</p>
+
+
+<p style="text-align:center;"><img src="{{ site.baseurl }}/png/scrape.png" alt="scrape"></p>
+
+
+<h2><u>Cleaning Data</u></h2>
+
+
+<p align="justify">After that we find ourselves with two databases. The one we “created” was really messy so we needed to clean it a lot. After some basics transformation on the data as such as putting the date in date format and calculating an average column for the rating, the most interesting things we used in this parts was probably the Google API and the nest function of tidyverse. The nest function basically allow you to put data frame inside data frame, the structure is more of a list inside a data frame but the idea is there. This was really helpful to us since we had one line per restaurant but hundreds of review for each restaurant. So we nested the two data frame and join them together which was no easy task because of the differences in the names. At this point we wanted to plot the restaurant we scraped on a map. We had the addresses but to plot them on a map we needed the geolocalisation. The geocode function allow us to get this information from Google but when we collected the data some where randomly missing. To solve that problem we used a Google API key to register ourselves which allow us to access a certain amount of request on the Google API, it worked like a charm. To do so we also needed to use the devtool package so we could install a custom version of ggplot where register_google function allow us to register our API key. After all these steps we finally had our data ready to work on. </p>
+
+<h2><u>Analysis Of The Data</u></h2>
+<p style="text-align:center;"><img src="{{ site.baseurl }}/png/anal.png" alt="analyse"></p>
+
+<p align="justify">At this point, it was time to explore our data and plot some graph and maps. First we plot some basic graph, nothing fancy but it allow us to see clearly what we had. Then we us the leaflet package to plot the restaurant on an interactive map where we could display them by categories or hide some of them. The plotly allowed us to do the same for the plot of the time series (average rating vs date). For the time series we also needed to pad the series since obviously we don’t had review on a regular basis. </p>
+
+<h2><u>Website</u></h2>
+
+<p align="justify"> At the end we decided to present our project in the form of a website. We used GitHub page to host our site. We thus had to learn once again a bit of html and css and to use Jekyll. Jekyll allowed us to host our website locally which was more convenient to create it. Jekyll is also installed and used with terminal.</p>
+
+
+
+
+
+
+
+
